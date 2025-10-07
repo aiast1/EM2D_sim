@@ -361,3 +361,396 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Magnetic Field Simulator - .gitignore
+
+# ===========================
+# Build Directories
+# ===========================
+build/
+build-*/
+out/
+bin/
+obj/
+debug/
+release/
+x64/
+x86/
+ARM/
+ARM64/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+CTestTestfile.cmake
+_deps/
+
+# Ninja build files
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# ===========================
+# Visual Studio / MSVC
+# ===========================
+.vs/
+.vscode/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.tlb
+*.tlh
+*.bsc
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tli
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds/
+*.pidb
+*.svclog
+*.scc
+ipch/
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ===========================
+# Compiler/Linker Output
+# ===========================
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.exp
+*.pdb
+*.idb
+*.ilk
+*.map
+*.manifest
+*.res
+*.rc2
+
+# Static/dynamic libraries
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.so.*
+*.dylib
+
+# ===========================
+# vcpkg
+# ===========================
+vcpkg_installed/
+.vcpkg-root
+vcpkg-manifest-install.log
+
+# ===========================
+# Package Managers
+# ===========================
+# Conan
+conanbuildinfo.*
+conandata.txt
+conanfile.txt.user
+conaninfo.txt
+graph_info.json
+.conan/
+
+# Hunter
+_3rdParty/
+.hunter/
+
+# ===========================
+# Operating System Files
+# ===========================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================
+# Temporary Files
+# ===========================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.#*
+#*#
+
+# ===========================
+# Documentation Generation
+# ===========================
+docs/_build/
+site/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Doxygen
+html/
+latex/
+*.tag
+
+# ===========================
+# Testing & Coverage
+# ===========================
+# Google Test
+googletest/
+gtest/
+*.gcov
+*.gcda
+*.gcno
+coverage/
+coverage.info
+lcov.info
+
+# Catch2
+tests/reports/
+
+# ===========================
+# Profiling
+# ===========================
+*.prof
+perf.data*
+gmon.out
+
+# ===========================
+# Static Analysis
+# ===========================
+# Clang Static Analyzer
+*.plist
+scan-build/
+
+# SonarQube
+.sonarqube/
+.scannerwork/
+
+# ===========================
+# Custom Project Files
+# ===========================
+
+# Raylib specific (if building from source)
+raylib/
+external/raylib/
+
+# JSON configuration backups
+*.json.bak
+*.json.backup
+config_*.json
+
+# Field data exports (if implemented)
+*.csv
+*.dat
+*.field
+
+# Image/video exports (if implemented)
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tga
+*.gif
+*.mp4
+*.avi
+
+# Log files
+*.log
+debug.txt
+trace.txt
+
+# Benchmark results
+benchmarks/
+benchmark_*.txt
+
+# ===========================
+# Development Tools
+# ===========================
+
+# Valgrind
+vgcore.*
+*.memcheck
+
+# AddressSanitizer
+*.asan
+
+# ThreadSanitizer
+*.tsan
+
+# UndefinedBehaviorSanitizer
+*.ubsan
+
+# ===========================
+# Backup Files
+# ===========================
+*.bak
+*.backup
+*.old
+*.orig
+*~
+
+# ===========================
+# Language-specific
+# ===========================
+
+# Python (if any scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node.js (if any tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# ===========================
+# Editor/IDE Specific
+# ===========================
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Nano
+*.save
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Atom
+.atom/
+
+# ===========================
+# Network/Remote
+# ===========================
+.ftp*
+.ftpconfig
+
+# ===========================
+# Custom ignores for this project
+# ===========================
+
+# Magnetic field simulation results
+field_output/
+simulation_results/
+
+# Performance profiling
+*.perf
+timing_*.txt
+
+# Configuration variations
+config_test_*.json
+scenario_*.json
+
+# Development notes
+TODO.md
+NOTES.md
+*.draft
