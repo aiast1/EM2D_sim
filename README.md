@@ -1,4 +1,4 @@
-# ?? Magnetic Field Simulator - FEMM Clone
+﻿# Magnetic Field Simulator - FEMM Clone
 
 A high-resolution, interactive magnetic field visualization tool built with C++20 and Raylib. This project provides a simplified clone of the popular FEMM (Finite Element Method Magnetics) software, allowing users to visualize magnetic dipole fields with professional-quality antialiased rendering.
 
@@ -7,38 +7,40 @@ A high-resolution, interactive magnetic field visualization tool built with C++2
 ![Raylib](https://img.shields.io/badge/Graphics-Raylib-orange)
 ![CMake](https://img.shields.io/badge/Build-CMake-red)
 
-## ? Features
+## Features
 
-### ?? Professional Visualization
-- **High-resolution 512�512 field computation** with bilinear antialiasing
+### Professional Visualization
+- **High-resolution 512×512 field computation** with bilinear antialiasing
 - **FEMM-style color mapping** with 7-zone professional gradient:
-  - Deep Blue/Purple ? Very strong South pole field
-  - Blue ? Strong South field  
-  - Cyan ? Medium South field
-  - Green ? Neutral/weak field
-  - Yellow ? Medium North field
-  - Orange ? Strong North field
-  - Red ? Very strong North pole field
+  - Deep Blue/Purple → Very strong South pole field
+  - Blue → Strong South field  
+  - Cyan → Medium South field
+  - Green → Neutral/weak field
+  - Yellow → Medium North field
+  - Orange → Strong North field
+  - Red → Very strong North pole field
 
-### ?? Interactive Controls
+
+
+### Interactive Controls
 - **Real-time color range adjustment** (UP/DOWN arrows for coarse, LEFT/RIGHT for fine)
 - **Dynamic field sensitivity** from 0.1 to 4.0+ range
 - **Reset functionality** (R key) to return to default settings
 - **Smooth 60 FPS** rendering with responsive controls
 
-### ?? Physics Accuracy
-- **Realistic magnetic dipole fields** using proper B? ? (3(m?�r?)r? - m?)/r� equations
+### Physics Accuracy
+- **Realistic magnetic dipole fields** using proper B⃗ ∝ (3(m⃗·r̂)r̂ - m⃗)/r³ equations
 - **Vector field superposition** from multiple magnets
 - **Configurable magnet arrangements** via JSON configuration
 - **Multiple magnet orientations** (North-South, East-West, diagonal)
 
-### ?? Technical Features
+### ⚙ Technical Features
 - **JSON-configurable scenarios** for easy customization
 - **Consolidated codebase** with minimal file overhead
 - **Cross-platform compatibility** via Raylib
 - **Professional antialiasing** with bilinear texture filtering
 
-## ?? Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 - **CMake 3.8+** (tested with 3.31.6)
@@ -71,12 +73,12 @@ A high-resolution, interactive magnetic field visualization tool built with C++2
    ./build/em2d_sfml/em2d.exe
    ```
 
-## ?? Usage
+## 🎯 Usage
 
 ### Basic Controls
 - **Arrow Keys**: Adjust color sensitivity
-  - `UP/DOWN`: Coarse adjustment (�0.05)
-  - `LEFT/RIGHT`: Fine adjustment (�0.02)
+  - `UP/DOWN`: Coarse adjustment (±0.05)
+  - `LEFT/RIGHT`: Fine adjustment (±0.02)
 - **R**: Reset color range to default
 - **ESC**: Exit the application
 
@@ -92,7 +94,7 @@ A high-resolution, interactive magnetic field visualization tool built with C++2
 - **Green regions**: Neutral or weak magnetic fields
 - **Smooth gradients**: Show realistic field strength transitions
 
-## ?? Configuration
+## ⚙️ Configuration
 
 ### Magnet Configuration
 Edit `em2d_sfml/assets/config.json` to customize the magnet arrangement:
@@ -135,45 +137,45 @@ Edit `em2d_sfml/assets/config.json` to customize the magnet arrangement:
 - **East pole**: `"moment_x": 1.0, "moment_y": 0.0`
 - **Diagonal NE**: `"moment_x": 0.707, "moment_y": 0.707`
 
-## ??? Project Structure
+## 🏗️ Project Structure
 
 ```
 magnetic-field-simulator/
-??? src/
-?   ??? main.cpp              # Main application entry point
-?   ??? FDTD.hpp/.cpp         # Magnetic field computation engine
-?   ??? Renderer.hpp/.cpp     # Raylib-based visualization
-?   ??? Config.hpp/.cpp       # JSON configuration system
-?   ??? Source.hpp            # (Legacy - being consolidated)
-??? em2d_sfml/
-?   ??? assets/
-?   ?   ??? config.json       # Magnet configuration file
-?   ??? CMakeLists.txt        # Build configuration
-??? README.md
-??? .gitignore
-??? CMakeLists.txt            # Root build configuration
+├── src/
+│   ├── main.cpp              # Main application entry point
+│   ├── FDTD.hpp/.cpp         # Magnetic field computation engine
+│   ├── Renderer.hpp/.cpp     # Raylib-based visualization
+│   ├── Config.hpp/.cpp       # JSON configuration system
+│   └── Source.hpp            # (Legacy - being consolidated)
+├── em2d_sfml/
+│   ├── assets/
+│   │   └── config.json       # Magnet configuration file
+│   └── CMakeLists.txt        # Build configuration
+├── README.md
+├── .gitignore
+└── CMakeLists.txt            # Root build configuration
 ```
 
-## ?? Physics Background
+## 🔬 Physics Background
 
 This simulator implements realistic magnetic dipole field equations based on fundamental electromagnetic theory:
 
 ### Magnetic Dipole Field Formula
 ```
-B?(r?) = (??/4?) � (3(m?�r?)r? - m?)/r�
+B⃗(r⃗) = (μ₀/4π) × (3(m⃗·r̂)r̂ - m⃗)/r³
 ```
 
 Where:
-- **B?**: Magnetic field vector
-- **m?**: Magnetic dipole moment vector  
-- **r?**: Position vector from dipole to field point
-- **r?**: Unit vector in r? direction
-- **??**: Permeability of free space
+- **B⃗**: Magnetic field vector
+- **m⃗**: Magnetic dipole moment vector  
+- **r⃗**: Position vector from dipole to field point
+- **r̂**: Unit vector in r⃗ direction
+- **μ₀**: Permeability of free space
 
 ### Field Superposition
 Multiple magnets create complex field patterns through vector addition of individual dipole contributions.
 
-## ?? Educational Use
+## 🎓 Educational Use
 
 This simulator is perfect for:
 - **Physics education** - Visualizing magnetic field concepts
@@ -181,7 +183,7 @@ This simulator is perfect for:
 - **Research** - Quick magnetic field pattern analysis
 - **Presentation** - Professional-quality field visualizations
 
-## ??? Development
+## 🛠️ Development
 
 ### Building from Source
 ```bash
@@ -205,14 +207,14 @@ cmake --build build-release
 - **Clear variable naming** with descriptive identifiers
 - **Minimal external dependencies**
 
-## ?? Performance
+## 📊 Performance
 
-- **Computation**: 512�512 = 262,144 field points calculated per frame
+- **Computation**: 512×512 = 262,144 field points calculated per frame
 - **Rendering**: 60 FPS with bilinear antialiasing
 - **Memory**: ~4MB for field storage + textures
 - **Startup**: < 1 second initialization on modern hardware
 
-## ?? Contributing
+## 🤝 Contributing
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -227,22 +229,22 @@ cmake --build build-release
 - Export functionality for field data
 - Animation/time-varying fields
 
-## ?? License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ?? Acknowledgments
+## 🙏 Acknowledgments
 
 - **FEMM** (David Meeker) - Inspiration for field visualization style
 - **Raylib** (Ramon Santamaria) - Excellent graphics framework
 - **nlohmann/json** - Simple JSON parsing
 - **Electromagnetic theory** - Maxwell's equations and magnetic dipole physics
 
-## ?? Contact
+## 📧 Contact
 
 - **GitHub Issues**: For bug reports and feature requests
 - **Discussions**: For general questions and ideas
 
 ---
 
-**Visualize the invisible world of magnetic fields with professional-quality rendering!** ???
+**Visualize the invisible world of magnetic fields with professional-quality rendering!** 🧲✨
