@@ -1,11 +1,16 @@
 {
+  "version": "2.0",
   "scenario": "ultra_high_resolution_dipole_array",
   "description": "Ultra-high resolution 1024x1024 magnetic field visualization with enhanced detail",
+  "author": "Magnetic Field Simulator Contributors",
+  "date_created": "2025-01-15",
   "grid": { 
     "nx": 1024, 
     "ny": 1024, 
     "dx": 0.0005, 
-    "dy": 0.0005 
+    "dy": 0.0005,
+    "total_points": 1048576,
+    "quality": "ultra_high_definition"
   },
   "timestepping": { "max_steps": 1 },
   "materials": [],
