@@ -10,7 +10,12 @@
 #define M_PI 3.14159265358979323846
 #endif
 
+// Ultra-High Resolution Magnetic Field Computation Engine
+// Implements realistic magnetic dipole field equations
+// Optimized for parallel computation and large-scale field calculations
+
 // Consolidated Source class (previously in Source.hpp)
+// Supports various electromagnetic source types for field generation
 class Source {
 public:
     Source() = default;
@@ -40,6 +45,9 @@ public:
     SourceConfig conf;
 };
 
+// Finite-Difference Time-Domain (FDTD) Solver
+// Solves Maxwell's equations for electromagnetic field propagation
+// in heterogeneous media with arbitrary scalar source distributions
 class FDTD {
 public:
     FDTD(int nx, int ny, double dx, double dy);
