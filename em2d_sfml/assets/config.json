@@ -1,90 +1,142 @@
 {
-  "scenario": "beautiful_dipole_array",
+  "scenario": "ultra_high_resolution_dipole_array",
+  "description": "Ultra-high resolution 1024x1024 magnetic field visualization with enhanced detail",
   "grid": { 
-    "nx": 512, 
-    "ny": 512, 
-    "dx": 0.001, 
-    "dy": 0.001 
+    "nx": 1024, 
+    "ny": 1024, 
+    "dx": 0.0005, 
+    "dy": 0.0005 
   },
   "timestepping": { "max_steps": 1 },
   "materials": [],
   "sources": [],
   "magnets": [
     {
-      "name": "center_north",
-      "x": 256,
-      "y": 256,
+      "name": "center_north_primary",
+      "x": 512,
+      "y": 512,
       "moment_x": 0.0,
       "moment_y": 1.0,
-      "strength": 2.0
+      "strength": 2.5,
+      "description": "Primary central North pole"
     },
     {
-      "name": "left_south",
-      "x": 180,
-      "y": 256,
+      "name": "left_south_primary",
+      "x": 360,
+      "y": 512,
       "moment_x": 0.0,
       "moment_y": -1.0,
-      "strength": 1.5
+      "strength": 2.0,
+      "description": "Left South pole for primary dipole pair"
     },
     {
-      "name": "right_south", 
-      "x": 332,
-      "y": 256,
+      "name": "right_south_primary", 
+      "x": 664,
+      "y": 512,
       "moment_x": 0.0,
       "moment_y": -1.0,
-      "strength": 1.5
+      "strength": 2.0,
+      "description": "Right South pole for primary dipole pair"
     },
     {
-      "name": "top_east",
-      "x": 256,
-      "y": 180,
+      "name": "top_east_secondary",
+      "x": 512,
+      "y": 360,
       "moment_x": 1.0,
       "moment_y": 0.0,
-      "strength": 1.2
+      "strength": 1.8,
+      "description": "Top East pole for secondary cross pattern"
     },
     {
-      "name": "bottom_west",
-      "x": 256,
-      "y": 332,
+      "name": "bottom_west_secondary",
+      "x": 512,
+      "y": 664,
       "moment_x": -1.0,
       "moment_y": 0.0,
-      "strength": 1.2
+      "strength": 1.8,
+      "description": "Bottom West pole for secondary cross pattern"
     },
     {
-      "name": "corner_ne",
-      "x": 384,
-      "y": 128,
+      "name": "corner_ne_tertiary",
+      "x": 768,
+      "y": 256,
       "moment_x": 0.707,
       "moment_y": 0.707,
-      "strength": 1.0
+      "strength": 1.4,
+      "description": "Northeast corner magnet for complex field interactions"
     },
     {
-      "name": "corner_nw",
-      "x": 128,
-      "y": 128,
+      "name": "corner_nw_tertiary",
+      "x": 256,
+      "y": 256,
       "moment_x": -0.707,
       "moment_y": 0.707,
-      "strength": 1.0
+      "strength": 1.4,
+      "description": "Northwest corner magnet"
     },
     {
-      "name": "corner_se",
-      "x": 384,
-      "y": 384,
+      "name": "corner_se_tertiary",
+      "x": 768,
+      "y": 768,
       "moment_x": 0.707,
       "moment_y": -0.707,
-      "strength": 0.8
+      "strength": 1.2,
+      "description": "Southeast corner magnet"
     },
     {
-      "name": "corner_sw",
-      "x": 128,
-      "y": 384,
+      "name": "corner_sw_tertiary",
+      "x": 256,
+      "y": 768,
       "moment_x": -0.707,
       "moment_y": -0.707,
-      "strength": 0.8
+      "strength": 1.2,
+      "description": "Southwest corner magnet"
+    },
+    {
+      "name": "outer_ring_n1",
+      "x": 512,
+      "y": 128,
+      "moment_x": 0.0,
+      "moment_y": 1.0,
+      "strength": 1.0,
+      "description": "Outer ring North 1 for extended field patterns"
+    },
+    {
+      "name": "outer_ring_s1",
+      "x": 512,
+      "y": 896,
+      "moment_x": 0.0,
+      "moment_y": -1.0,
+      "strength": 1.0,
+      "description": "Outer ring South 1"
+    },
+    {
+      "name": "outer_ring_e1",
+      "x": 896,
+      "y": 512,
+      "moment_x": 1.0,
+      "moment_y": 0.0,
+      "strength": 0.9,
+      "description": "Outer ring East 1"
+    },
+    {
+      "name": "outer_ring_w1",
+      "x": 128,
+      "y": 512,
+      "moment_x": -1.0,
+      "moment_y": 0.0,
+      "strength": 0.9,
+      "description": "Outer ring West 1"
     }
   ],
   "visualization": {
     "field": "B",
-    "color_range": 1.8
+    "color_range": 1.6,
+    "description": "Optimized color range for ultra-high resolution field visualization"
+  },
+  "performance": {
+    "description": "1024x1024 = 1,048,576 field computation points for maximum detail",
+    "memory_usage": "~16MB for field storage",
+    "recommended_hardware": "Modern CPU with 8GB+ RAM for optimal performance"
   }
 }
