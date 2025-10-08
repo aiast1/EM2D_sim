@@ -2,6 +2,11 @@
 
 #include <raylib.h>
 #include <vector>
+#include <chrono>
+
+// Ultra-High Resolution Magnetic Field Renderer
+// Version: 2.0 - Professional FEMM-style visualization
+// Features: 1024x1024 resolution, bilinear antialiasing, adaptive performance
 
 class Renderer {
 public:
