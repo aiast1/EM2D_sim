@@ -6,6 +6,10 @@
 #include <chrono>
 #include <iomanip>
 
+// Ultra-High Resolution Magnetic Field Simulator
+// Performance optimized for 1024x1024 field computation
+// Real-time interactive visualization with adaptive FPS
+
 int main() {
     std::cout << "Starting Ultra-High Resolution Magnetic Field Simulator - FEMM Clone with Raylib..." << std::endl;
     
